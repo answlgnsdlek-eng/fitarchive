@@ -62,6 +62,25 @@ def head(title: str, desc: str, path: str, depth: int, image: str = "") -> str:
 </head><body>{rails()[0]}{rails()[1]}<div class="wrap">"""
 
 
+CONTACT = "fit.archive.kr@gmail.com"
+FOOT = ('<div style="margin-top:8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">'
+        '<a href="/about.html" style="color:inherit">소개</a><a href="/privacy.html" style="color:inherit">개인정보처리방침</a>'
+        f'<span>문의 {CONTACT}</span></div>')
+
+PAGES = {
+    "about": ("핏 아카이브 소개", """<h1 style="font-size:20px">핏 아카이브 소개</h1>
+<p class="detail">핏 아카이브는 매일 남자 코디를 소개하는 패션 채널입니다. 유튜브 쇼츠와 인스타그램에 하루 두 편씩 코디 영상을 올리고, 이 사이트에는 영상에 나온 룩과 실제로 구매할 수 있는 아이템 정보를 정리해 둡니다.</p>
+<p class="detail">룩마다 상의·하의·아우터·신발을 실제 판매 중인 상품으로 골라 조합합니다. 영상 속 모델 이미지는 AI로 만든 이미지이며, 아이템 링크는 실제 상품 페이지로 연결됩니다. 상품 가격과 재고는 판매처 사정에 따라 바뀔 수 있습니다.</p>
+<p class="detail">문의: {c}</p>"""),
+    "privacy": ("개인정보처리방침", """<h1 style="font-size:20px">개인정보처리방침</h1>
+<p class="detail">핏 아카이브(fitarchive.kr, 이하 "사이트")는 회원가입이나 개인정보 입력 기능이 없으며, 방문자의 이름·연락처 등 개인정보를 직접 수집하지 않습니다.</p>
+<p class="detail"><b>쿠키와 광고</b><br>사이트는 Google 애드센스 등 제3자 광고를 게재할 수 있습니다. Google을 포함한 제3자 공급업체는 쿠키를 사용해 사용자의 이전 방문 기록을 바탕으로 광고를 게재할 수 있습니다. 사용자는 Google 광고 설정(https://adssettings.google.com)에서 맞춤 광고를 끌 수 있고, 브라우저 설정에서 쿠키를 거부할 수 있습니다.</p>
+<p class="detail"><b>외부 링크</b><br>사이트의 상품 링크는 외부 쇼핑몰로 연결되며, 이동한 사이트에서의 개인정보 처리는 해당 사이트의 방침을 따릅니다.</p>
+<p class="detail"><b>문의</b><br>개인정보 관련 문의: {c}</p>
+<p class="detail">시행일: 2026년 10월 27일</p>"""),
+}
+
+
 def actions() -> str:
     return (f'<nav class="actions" aria-label="채널"><a class="btn yt" href="{YT}" target="_blank" rel="noopener">▶ 유튜브 구독하기</a>'
             f'<a class="btn ig" href="{IG}" target="_blank" rel="noopener">인스타 팔로우 @fit.archive.kr</a></nav>')
@@ -100,7 +119,7 @@ def build() -> None:
             + actions()
             + '<section style="display:flex;flex-direction:column;gap:12px"><div class="label">코디 정보</div><div class="list">'
             + ("".join(c + (f'<div class="adbox">{ad_unit(ADS["infeed"], "fluid")}</div>' if i == 1 and ADS["infeed"] else "") for i, c in enumerate(cards)) or '<div class="empty"><b>곧 올라옵니다</b></div>')
-            + f'</div></section><footer>{fmt(data.get("updated",""))} 업데이트</footer></div></body></html>')
+            + f'</div></section><footer>{fmt(data.get("updated",""))} 업데이트{FOOT}</footer></div></body></html>')
     (ROOT / "index.html").write_text(body, encoding="utf-8")
     # detail pages
     (ROOT / "e").mkdir(exist_ok=True)
@@ -116,8 +135,12 @@ def build() -> None:
                 + "".join(look_html(L, i, 1) for i, L in enumerate(ep["looks"])) + "</article>"
                 + '<a class="homebtn" href="../">다른 코디 더 보기</a>' + actions() + "</div></body></html>")
         (ROOT / "e" / f'{ep["id"]}.html').write_text(page, encoding="utf-8")
+    for slug, (t, body_) in PAGES.items():
+        (ROOT / f"{slug}.html").write_text(head(f"{t} | 핏 아카이브", t, f"{slug}.html", 0)
+            + '<div class="topbar"><a class="back" href="/">‹ 전체 코디로</a></div><article class="ep">'
+            + body_.format(c=CONTACT) + f'</article><footer>{FOOT}</footer></div></body></html>', encoding="utf-8")
     # sitemap
-    urls = [f"{SITE}/"] + [f'{SITE}/e/{ep["id"]}.html' for ep in eps]
+    urls = [f"{SITE}/", f"{SITE}/about.html", f"{SITE}/privacy.html"] + [f'{SITE}/e/{ep["id"]}.html' for ep in eps]
     (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                                       + "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
