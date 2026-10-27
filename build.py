@@ -41,7 +41,7 @@ def head(title: str, desc: str, path: str, depth: int, image: str = "") -> str:
 <meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}">{og}
 {FONTS}
 <link rel="stylesheet" href="{up}assets/style.css">
-<style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}*{{box-sizing:border-box}}h1,h2,p{{margin:0}}img{{max-width:100%}}.ep h2 a{{color:inherit;text-decoration:none}}.detail{{font-size:14px;color:var(--muted);line-height:1.7}}.lname{{font-weight:700;font-size:14.5px;margin-bottom:2px}}.back{{color:var(--muted);font-size:13px}}</style>
+<style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}*{{box-sizing:border-box}}h1,h2,p{{margin:0}}img{{max-width:100%}}.ep h2 a{{color:inherit;text-decoration:none}}.detail{{font-size:14px;color:var(--muted);line-height:1.7}}.lname{{font-weight:700;font-size:14.5px;margin-bottom:2px}}.back{{display:flex;align-items:center;gap:6px;width:max-content;padding:9px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none}}.topbar{{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;padding-block:8px;background:var(--bg)}}.homebtn{{display:block;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;background:var(--chip);color:var(--chip-ink)}}</style>
 </head><body><div class="wrap">"""
 
 
@@ -94,10 +94,10 @@ def build() -> None:
         intro = (f'<p class="detail">{e(ep["title"])} 영상에 나온 룩 {len(ep["looks"])}개입니다. '
                  f'{e(names)}까지, 룩마다 실제로 구매할 수 있는 아이템 링크를 모았습니다.</p>')
         page = (head(f'{ep["title"]} | 핏 아카이브', desc, f'e/{ep["id"]}.html', 1, ep["looks"][0]["img"])
-                + '<a class="back" href="../">‹ 핏 아카이브 전체 코디</a>'
+                + '<div class="topbar"><a class="back" href="../">‹ 전체 코디로</a></div>'
                 + f'<article class="ep"><div><h1 style="font-size:18px">{e(ep["title"])}</h1>{meta(ep, 1)}</div>{intro}'
                 + "".join(look_html(L, i, 1) for i, L in enumerate(ep["looks"])) + "</article>"
-                + actions() + "</div></body></html>")
+                + '<a class="homebtn" href="../">다른 코디 더 보기</a>' + actions() + "</div></body></html>")
         (ROOT / "e" / f'{ep["id"]}.html').write_text(page, encoding="utf-8")
     # sitemap
     urls = [f"{SITE}/"] + [f'{SITE}/e/{ep["id"]}.html' for ep in eps]
