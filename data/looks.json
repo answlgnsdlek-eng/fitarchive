@@ -2,6 +2,129 @@
   "updated": "2026-10-28",
   "episodes": [
     {
+      "id": "20261028-b",
+      "date": "2026-10-28",
+      "title": "목도리 하나로 분위기 달라지는 남자 머플러 코디",
+      "topic": "머플러",
+      "looks": [
+        {
+          "name": "그린 하프집업 니트에 체크 머플러",
+          "img": "img/20261028_b_1.jpg",
+          "items": [
+            {
+              "name": "블론드나인 하프집업 니트 그린",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2917016"
+            },
+            {
+              "name": "무신사 스탠다드 와이드 치노 베이지",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3758256"
+            },
+            {
+              "name": "무신사 스탠다드 스웨이드 로퍼",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5862870"
+            },
+            {
+              "name": "피스메이커 체크 머플러 브라운",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3638460"
+            }
+          ]
+        },
+        {
+          "name": "블랙 레더 블루종에 글렌체크 머플러",
+          "img": "img/20261028_b_2.jpg",
+          "items": [
+            {
+              "name": "스탠다드에러 레더 블루종 블랙",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5278267"
+            },
+            {
+              "name": "쿠어 울 크루넥 멜란지그레이",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5350608"
+            },
+            {
+              "name": "어널러코드 커브드 데님 생지",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5866558"
+            },
+            {
+              "name": "식스핏 볼드토 더비 브라운",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4667476"
+            },
+            {
+              "name": "노르딕아일랜드 머플러 그레이",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/897557"
+            }
+          ]
+        },
+        {
+          "name": "블랙 블루종에 코발트 머플러",
+          "img": "img/20261028_b_3.jpg",
+          "items": [
+            {
+              "name": "무신사 스탠다드 미니멀 재킷 블랙",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3790860"
+            },
+            {
+              "name": "무신사 스탠다드 벨티드 카고 블랙",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3758351"
+            },
+            {
+              "name": "위더로드 스웨이드 스니커즈",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5347550"
+            },
+            {
+              "name": "유니온블루 메리노 머플러 코발트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3752999"
+            }
+          ]
+        },
+        {
+          "name": "베이지 케이블 터틀넥에 아이보리 머플러",
+          "img": "img/20261028_b_4.jpg",
+          "items": [
+            {
+              "name": "소루 케이블 터틀넥 베이지",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3562445"
+            },
+            {
+              "name": "무신사 스탠다드 와이드 슬랙스 차콜",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/1224098"
+            },
+            {
+              "name": "제옥스 볼티모어 스니커즈",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7128131"
+            },
+            {
+              "name": "라모랭 니트 머플러 아이보리",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2834550"
+            },
+            {
+              "name": "엑스컨테이너 스웨이드 크로스백",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5309999"
+            }
+          ]
+        }
+      ],
+      "yt": "https://youtube.com/shorts/zis9nxoJ-Dc"
+    },
+    {
       "id": "20261028-a",
       "date": "2026-10-28",
       "title": "찬바람 불 때 이렇게 입으면 끝, 남자 늦가을 코디",
