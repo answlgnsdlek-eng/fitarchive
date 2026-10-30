@@ -1,6 +1,139 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "episodes": [
+    {
+      "id": "20261030-a",
+      "date": "2026-10-30",
+      "title": "주말에 뭐 입지? 남자 늦가을 코디",
+      "topic": "데일리",
+      "yt": "https://youtube.com/shorts/yp6rT3-ZSdQ",
+      "looks": [
+        {
+          "name": "브라운 레더에 옥스퍼드 셔츠 레이어드",
+          "img": "img/20261030_a_1.jpg",
+          "items": [
+            {
+              "name": "플레이스스튜디오 빈티지 레더자켓",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5367161"
+            },
+            {
+              "name": "무신사 스탠다드 리브드 크롭 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6736317"
+            },
+            {
+              "name": "제로라운지 오버핏 옥스포드 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4259316"
+            },
+            {
+              "name": "무신사 스탠다드 스트레이트 데님",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2447804"
+            },
+            {
+              "name": "식스핏 제로 더비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3485453"
+            }
+          ]
+        },
+        {
+          "name": "블랙 아노락에 차콜 후드",
+          "img": "img/20261030_a_2.jpg",
+          "items": [
+            {
+              "name": "스노우피크 퀼팅 후드 아노락",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4407280"
+            },
+            {
+              "name": "엘라모 오버핏 무지 후드티",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7351873"
+            },
+            {
+              "name": "비에스래빗 미드90 배기 데님",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2147032"
+            },
+            {
+              "name": "나이키 보메로 18",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5077217"
+            },
+            {
+              "name": "누프에블루 니트 비니",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4679052"
+            }
+          ]
+        },
+        {
+          "name": "블루 니트에 브라운 와이드 슬랙스",
+          "img": "img/20261030_a_3.jpg",
+          "items": [
+            {
+              "name": "건지 울른스 크루넥 스웨터",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4445975"
+            },
+            {
+              "name": "무신사 스탠다드 스트라이프 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3712750"
+            },
+            {
+              "name": "시그니처 원턱 와이드 슬랙스",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2124438"
+            },
+            {
+              "name": "블런드스톤 1615 첼시부츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2200997"
+            },
+            {
+              "name": "무신사 스탠다드 캐시미어 머플러",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/1145882"
+            }
+          ]
+        },
+        {
+          "name": "네이비 발마칸 코트에 오트밀 니트",
+          "img": "img/20261030_a_4.jpg",
+          "items": [
+            {
+              "name": "무신사 스탠다드 발마칸 코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2518452"
+            },
+            {
+              "name": "프리즘웍스 패치 라운드 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4422939"
+            },
+            {
+              "name": "브랜디드 에센셜 와이드 슬랙스",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4908982"
+            },
+            {
+              "name": "비에스큐티 레더 스니커즈",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/693598"
+            },
+            {
+              "name": "파르티멘토 나일론 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5090147"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "20261029-b",
       "date": "2026-10-29",
