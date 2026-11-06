@@ -1,6 +1,124 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "episodes": [
+    {
+      "id": "20261107-c",
+      "date": "2026-11-07",
+      "title": "더비 슈즈 하나로 끝나는 남자 겨울 코디",
+      "topic": "더비 슈즈",
+      "yt": "https://youtube.com/shorts/8pQJw0XM37g",
+      "looks": [
+        {
+          "name": "블랙 더비에 코트·연청 데님",
+          "img": "img/20261107_c_1.jpg",
+          "items": [
+            {
+              "name": "아테즈 블랙 울 싱글 코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7479405"
+            },
+            {
+              "name": "이코르 그레이 메리노 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4419402"
+            },
+            {
+              "name": "무신사 스탠다드 연청 와이드 데님",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3430436"
+            },
+            {
+              "name": "식스핏 블랙 제로 더비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3485941"
+            }
+          ]
+        },
+        {
+          "name": "스웨이드 더비에 레더·베이지 치노",
+          "img": "img/20261107_c_2.jpg",
+          "items": [
+            {
+              "name": "후브스 블랙 레더 카코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7182958"
+            },
+            {
+              "name": "오리지널데이 라이트그레이 후디",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6050596"
+            },
+            {
+              "name": "웬즈데이오아시스 베이지 치노",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3475928"
+            },
+            {
+              "name": "슈피트 U팁 스웨이드 더비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4877362"
+            }
+          ]
+        },
+        {
+          "name": "블랙 더비에 워크 재킷·카키 치노",
+          "img": "img/20261107_c_3.jpg",
+          "items": [
+            {
+              "name": "무신사 스탠다드 네이비 워크 재킷",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4774731"
+            },
+            {
+              "name": "음 화이트 옥스포드 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3921779"
+            },
+            {
+              "name": "무신사 스탠다드 카키 와이드 치노",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2602313"
+            },
+            {
+              "name": "유나이티드어슬레 네이비 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4333619"
+            },
+            {
+              "name": "로맨틱무브 블랙 빈티지 더비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2437045"
+            }
+          ]
+        },
+        {
+          "name": "브라운 더비에 하프집업·헤링본",
+          "img": "img/20261107_c_4.jpg",
+          "items": [
+            {
+              "name": "드릭스 그레이 하프 집업 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7131403"
+            },
+            {
+              "name": "드로우핏 블랙 터틀넥",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2868775"
+            },
+            {
+              "name": "트릴리온 브라운 헤링본 팬츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5275839"
+            },
+            {
+              "name": "야세 브라운 홀스하이드 더비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4466918"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "20261106-a",
       "date": "2026-11-06",
@@ -255,7 +373,7 @@
     {
       "id": "20261106-r",
       "date": "2026-11-06",
-      "title": "옷 잘 입는 남자의 겨울 코디 3가지",
+      "title": "에스컬레이터 3초 만에 보는 남자 겨울 코디 3가지",
       "topic": "겨울",
       "looks": [
         {
@@ -346,7 +464,8 @@
             }
           ]
         }
-      ]
+      ],
+      "yt": "https://youtube.com/shorts/aSTVQ_xrrbw"
     },
     {
       "id": "20261103-f",
