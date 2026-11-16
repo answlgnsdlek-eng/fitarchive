@@ -2,6 +2,101 @@
   "updated": "2026-11-16",
   "episodes": [
     {
+      "id": "20261116-n",
+      "date": "2026-11-16",
+      "kind": "release",
+      "title": "11월 셋째 주 신발 발매 소식",
+      "topic": "발매정보",
+      "yt": "https://youtube.com/shorts/wpuwTEYVRW4",
+      "looks": [
+        {
+          "label": "11.17 (화) 오전 10:00",
+          "name": "나이키 SB 에어 포스 1 로우 '네이비 앤 블랙'",
+          "info": "149,000원 · 선착순",
+          "img": "img/20261116_n_1.jpg",
+          "items": [
+            {
+              "name": "나이키 SNKRS 앱 발매 페이지",
+              "shop": "나이키 SNKRS",
+              "url": "https://www.nike.com/kr/launch/t/nike-sb-air-force-1-low-navy-and-black"
+            },
+            {
+              "name": "발매처 전체 보기",
+              "shop": "슈프라이즈",
+              "url": "https://www.shoeprize.com/product/nike-sb-air-force-1-low--navy-and-black-hm8517-400"
+            }
+          ]
+        },
+        {
+          "label": "11.19 (목) 오전 10:00",
+          "name": "원 블록 다운 × 나이키 에어맥스 95 빅 버블 럭스 '이탈리아'",
+          "info": "249,000원 · SNKRS 발매",
+          "img": "img/20261116_n_2.jpg",
+          "items": [
+            {
+              "name": "나이키 SNKRS 앱 발매 페이지",
+              "shop": "나이키 SNKRS",
+              "url": "https://www.nike.com/kr/launch/t/air-max-95-big-bubble-lux-one-block-down-italy-black"
+            }
+          ]
+        },
+        {
+          "label": "11.20 (금) 오전 10:00",
+          "name": "코르테이즈 × 나이키 샥스 R419 '메탈릭 실버 앤 유니버시티 레드'",
+          "info": "249,000원 · 드로우(응모)",
+          "img": "img/20261116_n_3.jpg",
+          "items": [
+            {
+              "name": "나이키 SNKRS 앱 응모 페이지",
+              "shop": "나이키 SNKRS",
+              "url": "https://www.nike.com/kr/launch/t/shox-r419-corteiz-metallic-silver-and-university-red"
+            },
+            {
+              "name": "발매처 전체 보기",
+              "shop": "슈프라이즈",
+              "url": "https://www.shoeprize.com/product/corteiz-x-nike-shox-r419-metallic-silver-university-red-black-iq9951-001"
+            }
+          ]
+        },
+        {
+          "label": "11.20 (금) 오전 10:00",
+          "name": "칼하트 WIP × 나이키 에어맥스 고아돔 로우 (블랙 · 라이트 브리티시 탠)",
+          "info": "239,000원 · 선착순",
+          "img": "img/20261116_n_4.jpg",
+          "items": [
+            {
+              "name": "블랙 — 나이키 SNKRS 발매 페이지",
+              "shop": "나이키 SNKRS",
+              "url": "https://www.nike.com/kr/launch/t/air-max-goadome-low-carhartt-wip-black-and-twilight-marsh"
+            },
+            {
+              "name": "라이트 브리티시 탠 — 나이키 SNKRS 발매 페이지",
+              "shop": "나이키 SNKRS",
+              "url": "https://www.nike.com/kr/launch/t/air-max-goadome-low-carhartt-wip-light-british-tan-and-twilight-marsh"
+            },
+            {
+              "name": "발매처 전체 보기",
+              "shop": "슈프라이즈",
+              "url": "https://www.shoeprize.com/product/carhartt-wip-x-nike-air-max-goadome-low-black-and-twilight-marsh-iw6306-001"
+            }
+          ]
+        },
+        {
+          "label": "11.21 (토) 오전 9:30~10:00",
+          "name": "에어 조던 3 '낫 나이스'",
+          "info": "259,000원 · 선착순 (튠 09:30 · 훕시티 10:00)",
+          "img": "img/20261116_n_5.jpg",
+          "items": [
+            {
+              "name": "훕시티 · 튠 발매처 보기",
+              "shop": "슈프라이즈",
+              "url": "https://www.shoeprize.com/product/air-jordan-3-not-nice-black-challenge-red-off-noir-elemental-gold-if4396-001"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "20261116-c",
       "date": "2026-11-16",
       "title": "워크 부츠 하나로 끝나는 남자 겨울 코디",

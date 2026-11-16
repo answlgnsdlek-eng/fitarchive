@@ -96,14 +96,17 @@ def look_html(L: dict, i: int, depth: int) -> str:
         f'{f"<span class=shop>{e(x.get("shop"))}</span>" if x.get("shop") else ""}</span><span class="go">링크 ›</span></a>'
         for x in L.get("items", []))
     nm = f'<div class="lname">{e(L["name"])}</div>' if L.get("name") else ""
-    return (f'<div class="look"><img src="{up}{e(L["img"])}" alt="LOOK {i+1} {e(L.get("name",""))}" loading="lazy" width="132" height="165">'
-            f'<div class="items"><span class="lk">LOOK {i+1:02d}</span>{nm}{items}</div></div>')
+    info = f'<div class="detail" style="font-size:13px">{e(L["info"])}</div>' if L.get("info") else ""
+    lk = e(L.get("label") or f"LOOK {i+1:02d}")
+    return (f'<div class="look"><img src="{up}{e(L["img"])}" alt="{lk} {e(L.get("name",""))}" loading="lazy" width="132" height="165">'
+            f'<div class="items"><span class="lk">{lk}</span>{nm}{info}{items}</div></div>')
 
 
 def meta(ep: dict, depth: int) -> str:
     yt = f'<a href="{e(ep["yt"])}" target="_blank" rel="noopener">영상 보기</a>' if ep.get("yt") else ""
     tp = f'<span>#{e(ep["topic"])}</span>' if ep.get("topic") else ""
-    return f'<div class="meta"><span>{fmt(ep["date"])} 공개</span><span>룩 {len(ep["looks"])}개</span>{tp}{yt}</div>'
+    unit = "발매" if ep.get("kind") == "release" else "룩"
+    return f'<div class="meta"><span>{fmt(ep["date"])} 공개</span><span>{unit} {len(ep["looks"])}개</span>{tp}{yt}</div>'
 
 
 def build() -> None:
@@ -113,7 +116,8 @@ def build() -> None:
     cards = []
     for ep in eps:
         looks = ep["looks"]
-        more = f'<a class="more" href="e/{e(ep["id"])}.html">룩 {len(looks)}개 전체 보기 ›</a>' if len(looks) > 2 else ""
+        unit = "발매" if ep.get("kind") == "release" else "룩"
+        more = f'<a class="more" href="e/{e(ep["id"])}.html">{unit} {len(looks)}개 전체 보기 ›</a>' if len(looks) > 2 else ""
         cards.append(f'<article class="ep"><div><h2><a href="e/{e(ep["id"])}.html">{e(ep["title"])}</a></h2>{meta(ep, 0)}</div>'
                      + "".join(look_html(L, i, 0) for i, L in enumerate(looks[:2])) + more + "</article>")
     body = (head("핏 아카이브 — 남자 코디 정보·아이템 링크", "매일 남자 코디 2개. 영상 속 코디 아이템 링크를 전부 정리했습니다.", "", 0,
@@ -130,8 +134,13 @@ def build() -> None:
         names = ", ".join(L.get("name", "") for L in ep["looks"] if L.get("name"))
         n_items = sum(len(L.get("items", [])) for L in ep["looks"])
         desc = f'{ep["title"]}. {names}. 영상에 나온 아이템 {n_items}개 링크를 정리했습니다.'
-        intro = (f'<p class="detail">{e(ep["title"])} 영상에 나온 룩 {len(ep["looks"])}개입니다. '
-                 f'{e(names)}까지, 룩마다 실제로 구매할 수 있는 아이템 링크를 모았습니다.</p>')
+        if ep.get("kind") == "release":
+            desc = f'{ep["title"]}. {names}. 발매일·가격·발매처 링크를 정리했습니다.'
+            intro = (f'<p class="detail">{e(ep["title"])} — 이번 주 발매 {len(ep["looks"])}개의 날짜, 가격, 발매 방식과 '
+                     f'발매처 바로가기를 모았습니다. 발매 정보는 브랜드 사정에 따라 바뀔 수 있으니 발매처 공지를 함께 확인하세요.</p>')
+        else:
+            intro = (f'<p class="detail">{e(ep["title"])} 영상에 나온 룩 {len(ep["looks"])}개입니다. '
+                     f'{e(names)}까지, 룩마다 실제로 구매할 수 있는 아이템 링크를 모았습니다.</p>')
         page = (head(f'{ep["title"]} | 핏 아카이브', desc, f'e/{ep["id"]}.html', 1, ep["looks"][0]["img"])
                 + '<div class="topbar"><a class="back" href="../">‹ 전체 코디로</a></div>'
                 + f'<article class="ep"><div><h1 style="font-size:18px">{e(ep["title"])}</h1>{meta(ep, 1)}</div>{intro}'
