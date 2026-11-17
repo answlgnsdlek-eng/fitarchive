@@ -1,6 +1,465 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "episodes": [
+    {
+      "id": "20261117-c",
+      "date": "2026-11-17",
+      "title": "숏패딩에 잘 어울리는 남자 겨울 코디 4가지",
+      "topic": "숏패딩",
+      "yt": "https://youtube.com/shorts/Lht7JUraQoI",
+      "looks": [
+        {
+          "name": "블랙 레더 숏패딩에 카펜터 팬츠, 스트릿",
+          "img": "img/20261117_c_1.jpg",
+          "items": [
+            {
+              "name": "에드리엘로스 레더 푸퍼",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5807883"
+            },
+            {
+              "name": "프라임에이트 스탠다드 후드",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6103449"
+            },
+            {
+              "name": "디앤에스알 카펜터 팬츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4307758"
+            },
+            {
+              "name": "조셉트 브루노 블랙",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4401702"
+            },
+            {
+              "name": "파르티멘토 워시드 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5966696"
+            },
+            {
+              "name": "크림소다랩 패치 크로스백",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7389376"
+            }
+          ]
+        },
+        {
+          "name": "브라운 숏패딩에 오트밀 니트",
+          "img": "img/20261117_c_2.jpg",
+          "items": [
+            {
+              "name": "마인드브릿지 하이넥 숏 다운",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7349028"
+            },
+            {
+              "name": "와르 하찌 크루넥 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5531168"
+            },
+            {
+              "name": "무신사 스탠다드 세미 부츠컷",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2823290"
+            },
+            {
+              "name": "캘빈클라인 진 청키 스니커즈",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5936722"
+            },
+            {
+              "name": "9999아카이브 아일렛 비니",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6019654"
+            },
+            {
+              "name": "논픽 덴지 선글라스",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6379703"
+            }
+          ]
+        },
+        {
+          "name": "네이비 숏패딩에 오렌지 머플러 포인트",
+          "img": "img/20261117_c_3.jpg",
+          "items": [
+            {
+              "name": "인더스트 N3B 패딩 파카",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4539671"
+            },
+            {
+              "name": "나이키 조던 크루넥 스웻",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7445286"
+            },
+            {
+              "name": "스켈리웩 퍼티그 카고 팬츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4794912"
+            },
+            {
+              "name": "닥터마틴 테마라 로퍼",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5364463"
+            },
+            {
+              "name": "에스피오나지 밀러 머플러",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7443808"
+            },
+            {
+              "name": "타이맥스 멀린 가죽시계",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6565306"
+            }
+          ]
+        },
+        {
+          "name": "에크루 숏패딩에 블루 체크 셔츠",
+          "img": "img/20261117_c_4.jpg",
+          "items": [
+            {
+              "name": "캉골 다운 점퍼 에크루",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4376152"
+            },
+            {
+              "name": "247시리즈 옴브레 체크 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7463235"
+            },
+            {
+              "name": "무신사 스탠다드 테이퍼드 데님",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2007390"
+            },
+            {
+              "name": "컨버스 척 70 레더",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7436385"
+            },
+            {
+              "name": "노스페이스 보레알리스 미니",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7584908"
+            },
+            {
+              "name": "엄브로 나일론 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6745487"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20261117-a",
+      "date": "2026-11-17",
+      "title": "옷 잘 입는 남자들의 2026년 남자 겨울 코디 no.35",
+      "topic": "겨울 코디",
+      "yt": "https://youtube.com/shorts/niiHvnTUeVc",
+      "looks": [
+        {
+          "name": "에크루 더블 코트에 올블랙 이너",
+          "img": "img/20261117_a_1.jpg",
+          "items": [
+            {
+              "name": "노이어 오버사이즈 더블 코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7690386"
+            },
+            {
+              "name": "트릴리온 모크넥 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7122842"
+            },
+            {
+              "name": "트릴리온 원턱 와이드 슬랙스",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5052753"
+            },
+            {
+              "name": "무신사 스탠다드 첼시 부츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2101922"
+            },
+            {
+              "name": "언더오프 울 니트 머플러",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5689856"
+            },
+            {
+              "name": "그라픽 플라스틱 621",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3768603"
+            }
+          ]
+        },
+        {
+          "name": "블랙 시어링 봄버에 체크 셔츠, 스트릿",
+          "img": "img/20261117_a_2.jpg",
+          "items": [
+            {
+              "name": "노이즈 시어링 퍼 봄버",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7543067"
+            },
+            {
+              "name": "노스페이스 코어 후디",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7536312"
+            },
+            {
+              "name": "비디알 CCC 플란넬 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4426050"
+            },
+            {
+              "name": "그라픽 베나 와이드 데님",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6402198"
+            },
+            {
+              "name": "뉴발란스 860 V15",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6064090"
+            },
+            {
+              "name": "제이엘브 아플리케 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7080793"
+            }
+          ]
+        },
+        {
+          "name": "퍼플 코듀로이 블루종에 후드 레이어드",
+          "img": "img/20261117_a_3.jpg",
+          "items": [
+            {
+              "name": "와키윌리 코듀로이 블루종",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4455046"
+            },
+            {
+              "name": "퍼스텝 피그먼트 후드",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7396329"
+            },
+            {
+              "name": "언탭트 바이오 워싱 와이드",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3856803"
+            },
+            {
+              "name": "무신사 스탠다드 데저트 부츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4597626"
+            },
+            {
+              "name": "미세키서울 텍스처 비니",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7472079"
+            },
+            {
+              "name": "SSRL 플랩 버클 백",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2059496"
+            }
+          ]
+        },
+        {
+          "name": "네이비 더플코트에 크림 터틀넥",
+          "img": "img/20261117_a_4.jpg",
+          "items": [
+            {
+              "name": "리 울 블렌드 롱 더플 코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5553534"
+            },
+            {
+              "name": "베리베인 밸런스 터틀넥",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4642203"
+            },
+            {
+              "name": "솔티 W301 울 트라우저",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3665190"
+            },
+            {
+              "name": "조셉트 마마스 블랙",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3674057"
+            },
+            {
+              "name": "페퍼시즈닝 체크 머플러",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7604417"
+            },
+            {
+              "name": "탠디 메탈 손목시계",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2005075"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20261117-b",
+      "date": "2026-11-17",
+      "title": "실패 없는 남자 겨울 브라운 코디",
+      "topic": "브라운",
+      "yt": "https://youtube.com/shorts/62HXcXHEA9Q",
+      "looks": [
+        {
+          "name": "브라운 발마칸 코트에 아이보리 터틀넥",
+          "img": "img/20261117_b_1.jpg",
+          "items": [
+            {
+              "name": "비슬로우 캐시미어 발마칸",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2782762"
+            },
+            {
+              "name": "엔피스튜디오 케이블 폴라",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3620968"
+            },
+            {
+              "name": "애습 에센셜 와이드 치노",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6365296"
+            },
+            {
+              "name": "피노키 모디파이 브라운",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7072057"
+            },
+            {
+              "name": "지오다노 울 캐시미어 머플러",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4641859"
+            },
+            {
+              "name": "카멜로 누벅 장갑",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2653566"
+            }
+          ]
+        },
+        {
+          "name": "브라운 레더 블루종에 블랙 후드, 스트릿",
+          "img": "img/20261117_b_2.jpg",
+          "items": [
+            {
+              "name": "블랙모먼트 레더 블루종",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3779633"
+            },
+            {
+              "name": "에드리엘로스 커버 후드",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5701357"
+            },
+            {
+              "name": "토피 옥스포드 워크 팬츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6461382"
+            },
+            {
+              "name": "위더로드 캠프 누벅 워커",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5466680"
+            },
+            {
+              "name": "무신사 스탠다드 플리스 비니",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/6277397"
+            },
+            {
+              "name": "타스 스네이크 체인",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7574049"
+            }
+          ]
+        },
+        {
+          "name": "브라운 스웨이드 자켓에 그레이 니트",
+          "img": "img/20261117_b_3.jpg",
+          "items": [
+            {
+              "name": "수아레 스웨이드 카코트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7388599"
+            },
+            {
+              "name": "효지 워셔블 니트",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7325933"
+            },
+            {
+              "name": "수아레 핀터 세미와이드",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7245556"
+            },
+            {
+              "name": "바토즈 콤마 10 브라운",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5358719"
+            },
+            {
+              "name": "카시오 AQ-240E",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7457366"
+            },
+            {
+              "name": "마스카 프리 에코",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/3321849"
+            }
+          ]
+        },
+        {
+          "name": "버건디 니트에 브라운 골지 팬츠",
+          "img": "img/20261117_b_4.jpg",
+          "items": [
+            {
+              "name": "타미힐피거 케이블 하프집업",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7262705"
+            },
+            {
+              "name": "이카룩 골지 플리스 팬츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5883043"
+            },
+            {
+              "name": "컴스페이스 옥스포드 셔츠",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/4557871"
+            },
+            {
+              "name": "엄브로 코듀로이 볼캡",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/7343485"
+            },
+            {
+              "name": "노버크 스웨이드 왈라비",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/5302369"
+            },
+            {
+              "name": "이모티오 미니멀 크로스백",
+              "shop": "무신사",
+              "url": "https://www.musinsa.com/products/2305287"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "20261116-n",
       "date": "2026-11-16",
