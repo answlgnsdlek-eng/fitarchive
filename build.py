@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SITE = "https://fitarchive.kr"
 # 광고: 애드센스 승인 후 client(ca-pub-…)와 광고 단위 slot 번호만 채우면 양옆·목록 중간 광고가 켜진다. 비어 있으면 광고 자리 자체가 안 보인다.
-ADS = {"client": "", "side_left": "", "side_right": "", "infeed": ""}
+ADS = {"client": "ca-pub-4784570703582465", "side_left": "", "side_right": "", "infeed": ""}
 GA_ID = "G-41C517CWTY"  # 구글 애널리틱스 4 측정 ID (Jay 10/29)
 YT = "https://www.youtube.com/@fit.archive_kr?sub_confirmation=1"
 IG = "https://www.instagram.com/fit.archive.kr/"
@@ -56,6 +56,7 @@ def head(title: str, desc: str, path: str, depth: int, image: str = "") -> str:
 <link rel="canonical" href="{SITE}/{path}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}">{og}
+{f'<meta name="google-adsense-account" content="{ADS["client"]}">' if ADS["client"] else ""}
 {f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADS["client"]}" crossorigin="anonymous"></script>' if ADS["client"] else ""}
 {f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA_ID}");</script>' if GA_ID else ""}
 {FONTS}
