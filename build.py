@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parent
 SITE = "https://fitarchive.kr"
 # 광고: 애드센스 승인 후 client(ca-pub-…)와 광고 단위 slot 번호만 채우면 양옆·목록 중간 광고가 켜진다. 비어 있으면 광고 자리 자체가 안 보인다.
 ADS = {"client": "ca-pub-4784570703582465", "side_left": "", "side_right": "", "infeed": ""}
+import hashlib as _h
+CSS_V = _h.md5(open("assets/style.css","rb").read()).hexdigest()[:8]
 GA_ID = "G-41C517CWTY"  # 구글 애널리틱스 4 측정 ID (Jay 10/29)
 YT = "https://www.youtube.com/@fit.archive_kr?sub_confirmation=1"
 IG = "https://www.instagram.com/fit.archive.kr/"
@@ -60,7 +62,7 @@ def head(title: str, desc: str, path: str, depth: int, image: str = "") -> str:
 {f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADS["client"]}" crossorigin="anonymous"></script>' if ADS["client"] else ""}
 {f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA_ID}");</script>' if GA_ID else ""}
 {FONTS}
-<link rel="stylesheet" href="{up}assets/style.css">
+<link rel="stylesheet" href="{up}assets/style.css?v={CSS_V}">
 <style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}*{{box-sizing:border-box}}h1,h2,p{{margin:0}}img{{max-width:100%}}.ep h2 a{{color:inherit;text-decoration:none}}.detail{{font-size:14px;color:var(--muted);line-height:1.7}}.lname{{font-weight:700;font-size:14.5px;margin-bottom:2px}}.back{{display:flex;align-items:center;gap:6px;width:max-content;padding:9px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none}}.topbar{{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;padding-block:8px;background:var(--bg)}}.rail{{display:none}}@media (min-width:1100px){{.rail{{display:block;position:fixed;top:120px;width:160px}}.rail.left{{left:calc(50% - 230px - 200px)}}.rail.right{{right:calc(50% - 230px - 200px)}}}}.adbox{{min-height:0}}.homebtn{{display:block;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;background:var(--chip);color:var(--chip-ink)}}</style>
 </head><body>{rails()[0]}{rails()[1]}<div class="wrap">"""
 
