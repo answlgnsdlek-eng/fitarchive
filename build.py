@@ -92,15 +92,19 @@ def actions() -> str:
 
 def look_html(L: dict, i: int, depth: int) -> str:
     up = "../" * depth
-    items = "".join(
-        f'<a class="it" href="{e(x["url"])}" target="_blank" rel="noopener nofollow"><span>{e(x["name"])}'
-        f'{f"<span class=shop>{e(x.get("shop"))}</span>" if x.get("shop") else ""}</span><span class="go">링크 ›</span></a>'
-        for x in L.get("items", []))
+    def item(x):
+        th = (f'<img class="th" src="{e(x["thumb"])}" alt="" loading="lazy" referrerpolicy="no-referrer" width="64" height="64">'
+              if x.get("thumb") else "")
+        shop = f'<span class="shop">{e(x.get("shop"))}</span>' if x.get("shop") else ""
+        return (f'<a class="it" href="{e(x["url"])}" target="_blank" rel="noopener nofollow">{th}'
+                f'<span class="tx">{e(x["name"])}{shop}</span><span class="go">링크 ›</span></a>')
+    items = "".join(item(x) for x in L.get("items", []))
     nm = f'<div class="lname">{e(L["name"])}</div>' if L.get("name") else ""
     info = f'<div class="detail" style="font-size:13px">{e(L["info"])}</div>' if L.get("info") else ""
     lk = e(L.get("label") or f"LOOK {i+1:02d}")
-    return (f'<div class="look"><img src="{up}{e(L["img"])}" alt="{lk} {e(L.get("name",""))}" loading="lazy" width="132" height="165">'
-            f'<div class="items"><span class="lk">{lk}</span>{nm}{info}{items}</div></div>')
+    return (f'<div class="look"><div class="lhead"><span class="lk">{lk}</span>{nm}{info}</div>'
+            f'<img class="lphoto" src="{up}{e(L["img"])}" alt="{lk} {e(L.get("name",""))}" loading="lazy" width="600" height="750">'
+            f'<div class="items">{items}</div></div>')
 
 
 def meta(ep: dict, depth: int) -> str:

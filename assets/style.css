@@ -34,12 +34,16 @@ h1{font-size:21px;font-weight:700;text-wrap:balance}
 .ep h2{font-size:16px;font-weight:700;line-height:1.35;text-wrap:balance}
 .meta{font-size:12.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
 .meta a{color:var(--muted)}
-.look{display:grid;grid-template-columns:132px 1fr;gap:10px;align-items:start}
-.look img{width:132px;aspect-ratio:4/5;max-width:100%;object-fit:cover;border-radius:8px;background:var(--line)}
-.items{display:flex;flex-direction:column;gap:6px;min-width:0}
-.it{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;
-  color:var(--ink);text-decoration:none;font-size:13px;font-weight:500}
-.it span:first-child{min-width:0;overflow-wrap:anywhere}
+.look{display:flex;flex-direction:column;gap:10px;padding-top:4px}
+.look+.look{border-top:1px solid var(--line);padding-top:16px}
+.lhead{display:flex;flex-direction:column;gap:2px}
+.lphoto{display:block;width:100%;max-width:480px;aspect-ratio:4/5;height:auto;object-fit:cover;border-radius:10px;background:var(--line);margin:0 auto}
+.items{display:grid;grid-template-columns:1fr;gap:6px;min-width:0}
+@media (min-width:560px){.items{grid-template-columns:1fr 1fr}}
+.it{display:flex;align-items:center;gap:10px;padding:6px 10px 6px 6px;border:1px solid var(--line);border-radius:8px;
+  color:var(--ink);text-decoration:none;font-size:13px;font-weight:500;min-width:0}
+.it .th{width:64px;height:64px;flex:none;object-fit:cover;border-radius:6px;background:#fff}
+.it .tx{flex:1;min-width:0;overflow-wrap:anywhere}
 .it .go{color:var(--muted);font-size:12px;white-space:nowrap}
 .it .shop{color:var(--muted);font-size:11.5px;font-weight:400;display:block}
 .lk{font-family:var(--display);font-size:13px;letter-spacing:.5px;color:var(--muted)}
@@ -48,3 +52,4 @@ h1{font-size:21px;font-weight:700;text-wrap:balance}
 .empty b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:4px}
 footer{text-align:center;color:var(--muted);font-size:12px}
 @media (prefers-reduced-motion: no-preference){.btn{transition:transform .12s}.btn:active{transform:scale(.98)}}
+.lname{font-size:15px;font-weight:700}
