@@ -186,22 +186,47 @@ def build() -> None:
     eps = data["episodes"]
     guides = load_guides()
     # index
-    cards = []
+    KIND = {"a": ("daily", "데일리"), "b": ("topic", "주제별"), "c": ("item", "아이템"), "f": ("feed", "피드"), "n": ("release", "발매")}
+    tiles = []
     for ep in eps:
-        looks = ep["looks"]
+        k, kl = KIND.get(ep["id"].rsplit("-", 1)[-1], ("daily", "데일리"))
+        L0 = ep["looks"][0]
         unit = "발매" if ep.get("kind") == "release" else "룩"
-        more = f'<a class="more" href="e/{e(ep["id"])}.html">{unit} {len(looks)}개 전체 보기 ›</a>' if len(looks) > 2 else ""
-        cards.append(f'<article class="ep"><div><h2><a href="e/{e(ep["id"])}.html">{e(ep["title"])}</a></h2>{meta(ep, 0)}</div>'
-                     + "".join(look_html(L, i, 0) for i, L in enumerate(looks[:2])) + more + "</article>")
+        q = " ".join([ep["title"], ep.get("topic", "")] + [L.get("name", "") for L in ep["looks"]])
+        tiles.append(f'<a class="tile" href="e/{e(ep["id"])}.html" data-k="{k}" data-q="{e(q)}">'
+                     f'<span class="tim"><img src="{e(L0["img"])}" alt="{e(ep["title"])}" loading="lazy" width="600" height="750">'
+                     f'<span class="tb">{kl}</span><span class="tn">{unit} {len(ep["looks"])}</span></span>'
+                     f'<span class="tt">{e(ep["title"])}</span><span class="td">{fmt(ep["date"])}{" · #" + e(ep["topic"]) if ep.get("topic") else ""}</span></a>')
+    kinds_present = [kk for kk in ("daily", "topic", "item", "feed", "release") if any(f'data-k="{kk}"' in t for t in tiles)]
+    labels = {v[0]: v[1] for v in KIND.values()}
+    chips = ('<div class="chips" role="group" aria-label="종류"><button class="chip" aria-pressed="true" data-f="all">전체</button>'
+             + "".join(f'<button class="chip" aria-pressed="false" data-f="{kk}">{labels[kk]}</button>' for kk in kinds_present) + "</div>")
+    GRID_CSS = ('<style>.wrap:has(.grid){max-width:980px}.chips{display:flex;gap:6px;flex-wrap:wrap}'
+                '.srch{width:100%;font:inherit;font-size:14px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}'
+                '.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media(min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}'
+                '@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}'
+                '.tile{display:flex;flex-direction:column;gap:4px;color:var(--ink);text-decoration:none;min-width:0}'
+                '.tim{position:relative;display:block;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--line)}'
+                '.tim img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}.tile:hover .tim img{transform:scale(1.03)}'
+                '.tb,.tn{position:absolute;top:8px;font-size:11px;font-weight:700;padding:3px 7px;border-radius:999px}'
+                '.tb{left:8px;background:var(--chip);color:var(--chip-ink)}.tn{right:8px;background:rgba(255,255,255,.88);color:#17171a}'
+                '.tt{font-size:13.5px;font-weight:700;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}'
+                '.td{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tile[hidden]{display:none}'
+                '.gtop .glist{display:grid;grid-template-columns:1fr;gap:8px}@media(min-width:640px){.gtop .glist{grid-template-columns:repeat(3,1fr)}}</style>')
+    FILTER_JS = ('<script>(function(){var f="all",q="",ts=[].slice.call(document.querySelectorAll(".tile")),bs=[].slice.call(document.querySelectorAll(".chip[data-f]")),'
+                 's=document.querySelector(".srch"),n=document.querySelector(".cnt");function run(){var c=0;ts.forEach(function(t){var ok=(f==="all"||t.dataset.k===f)&&(!q||t.dataset.q.indexOf(q)>-1);'
+                 't.hidden=!ok;if(ok)c++});if(n)n.textContent=c+"개"}bs.forEach(function(b){b.addEventListener("click",function(){f=b.dataset.f;'
+                 'bs.forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});run()})});if(s)s.addEventListener("input",function(){q=s.value.trim();run()});run()})();</script>')
     body = (head("핏 아카이브 — 남자 코디 정보·아이템 링크", "매일 남자 코디 2개. 영상 속 코디 아이템 링크를 전부 정리했습니다.", "", 0,
                  eps[0]["looks"][0]["img"] if eps else "")
             + '<header><div class="logo" aria-hidden="true">FIT<br>ARCHIVE</div><h1>핏 아카이브</h1><p class="sub">매일 남자 코디 2개 · 영상 속 코디 정보는 전부 여기</p></header>'
             + actions()
-            + GUIDE_CSS + '<section style="display:flex;flex-direction:column;gap:12px"><div class="label">코디 가이드</div>'
+            + GUIDE_CSS + GRID_CSS + '<section class="gtop" style="display:flex;flex-direction:column;gap:12px"><div class="label">코디 가이드</div>'
             + guide_cards(guides[:3], "") + '<a class="more" href="g/">가이드 전체 보기 ›</a></section>'
-            + '<section style="display:flex;flex-direction:column;gap:12px"><div class="label">코디 정보</div><div class="list">'
-            + ("".join(c + (f'<div class="adbox">{ad_unit(ADS["infeed"], "fluid")}</div>' if i == 1 and ADS["infeed"] else "") for i, c in enumerate(cards)) or '<div class="empty"><b>곧 올라옵니다</b></div>')
-            + f'</div></section><footer>{fmt(data.get("updated",""))} 업데이트{FOOT}</footer></div></body></html>')
+            + '<section style="display:flex;flex-direction:column;gap:12px"><div class="label">코디 정보 <span class="cnt"></span></div>'
+            + '<input class="srch" type="search" placeholder="찾는 코디 검색 (예: 패딩, 코트, 네이비)" aria-label="코디 검색">' + chips
+            + '<div class="grid">' + ("".join(tiles) or '<div class="empty"><b>곧 올라옵니다</b></div>') + '</div></section>'
+            + f'<footer>{fmt(data.get("updated",""))} 업데이트{FOOT}</footer></div>' + FILTER_JS + '</body></html>')
     (ROOT / "index.html").write_text(body, encoding="utf-8")
     # detail pages
     (ROOT / "e").mkdir(exist_ok=True)
