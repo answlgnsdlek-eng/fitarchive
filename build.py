@@ -107,7 +107,7 @@ def look_html(L: dict, i: int, depth: int) -> str:
     nm = f'<div class="lname">{e(L["name"])}</div>' if L.get("name") else ""
     info = f'<div class="detail" style="font-size:13px">{e(L["info"])}</div>' if L.get("info") else ""
     lk = e(L.get("label") or f"LOOK {i+1:02d}")
-    return (f'<div class="look"><div class="lhead"><span class="lk">{lk}</span>{nm}{info}</div>'
+    return (f'<div class="look" id="look-{i+1}" style="scroll-margin-top:64px"><div class="lhead"><span class="lk">{lk}</span>{nm}{info}</div>'
             f'<img class="lphoto" src="{up}{e(L["img"])}" alt="{lk} {e(L.get("name",""))}" loading="lazy" width="600" height="750">'
             f'<div class="items">{items}</div></div>')
 
@@ -190,13 +190,14 @@ def build() -> None:
     tiles = []
     for ep in eps:
         k, kl = KIND.get(ep["id"].rsplit("-", 1)[-1], ("daily", "데일리"))
-        L0 = ep["looks"][0]
-        unit = "발매" if ep.get("kind") == "release" else "룩"
-        q = " ".join([ep["title"], ep.get("topic", "")] + [L.get("name", "") for L in ep["looks"]])
-        tiles.append(f'<a class="tile" href="e/{e(ep["id"])}.html" data-k="{k}" data-q="{e(q)}">'
-                     f'<span class="tim"><img src="{e(L0["img"])}" alt="{e(ep["title"])}" loading="lazy" width="600" height="750">'
-                     f'<span class="tb">{kl}</span><span class="tn">{unit} {len(ep["looks"])}</span></span>'
-                     f'<span class="tt">{e(ep["title"])}</span><span class="td">{fmt(ep["date"])}{" · #" + e(ep["topic"]) if ep.get("topic") else ""}</span></a>')
+        for i, L in enumerate(ep["looks"]):
+            lk = L.get("label") or f"LOOK {i+1:02d}"
+            nm = L.get("name") or ep["title"]
+            q = " ".join([ep["title"], ep.get("topic", ""), L.get("name", ""), L.get("info", "")] + [x.get("name", "") for x in L.get("items", [])])
+            tiles.append(f'<a class="tile" href="e/{e(ep["id"])}.html#look-{i+1}" data-k="{k}" data-q="{e(q)}">'
+                         f'<span class="tim"><img src="{e(L["img"])}" alt="{e(nm)}" loading="lazy" width="600" height="750">'
+                         f'<span class="tb">{kl}</span><span class="tn">{e(lk)}</span></span>'
+                         f'<span class="tt">{e(nm)}</span><span class="td">{fmt(ep["date"])} · {e(ep["title"])}</span></a>')
     kinds_present = [kk for kk in ("daily", "topic", "item", "feed", "release") if any(f'data-k="{kk}"' in t for t in tiles)]
     labels = {v[0]: v[1] for v in KIND.values()}
     chips = ('<div class="chips" role="group" aria-label="종류"><button class="chip" aria-pressed="true" data-f="all">전체</button>'
