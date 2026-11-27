@@ -58,6 +58,7 @@ def head(title: str, desc: str, path: str, depth: int, image: str = "") -> str:
 <link rel="canonical" href="{SITE}/{path}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}">{og}
+<meta name="naver-site-verification" content="78101433fc5c0b9d9f14d94a218f4b3007ba4e0b">
 {f'<meta name="google-adsense-account" content="{ADS["client"]}">' if ADS["client"] else ""}
 {f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADS["client"]}" crossorigin="anonymous"></script>' if ADS["client"] else ""}
 {f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA_ID}");</script>' if GA_ID else ""}
