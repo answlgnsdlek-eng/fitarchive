@@ -171,7 +171,7 @@ def related_guides(ep: dict, gs: list[dict]) -> list[dict]:
     text = " ".join([ep.get("title", ""), ep.get("topic", "")] + [L.get("name", "") for L in ep.get("looks", [])])
     keys = {"padding-guide": ["패딩"], "coat-length": ["코트", "맥코트"], "knit-material": ["니트", "가디건", "터틀넥"],
             "winter-shoes": ["부츠", "로퍼", "더비", "신발"], "muffler-tie": ["머플러"], "pants-fit": ["슬랙스", "데님", "코듀로이", "팬츠", "바지"],
-            "color-combo": ["네이비", "그레이", "브라운", "컬러", "블랙"], "winter-layering": ["레이어드", "출근"], "outer-guide": ["아우터", "무스탕", "피코트"]}
+            "color-combo": ["네이비", "그레이", "브라운", "컬러", "블랙"], "winter-layering": ["레이어드", "출근"], "outer-guide": ["아우터", "피코트"], "mustang-guide": ["무스탕", "시어링"], "beanie-gloves": ["비니", "장갑"]}
     hit = [g for g in gs if any(k in text for k in keys.get(g["slug"], []))]
     for g in gs:
         if len(hit) >= 2:
